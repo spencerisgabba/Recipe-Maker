@@ -6,10 +6,10 @@
       </v-toolbar>
       <v-tabs centered show-arrows>
         <v-tab>
-          <v-icon left>mdi-account</v-icon>My Recipies
+          <v-icon left>mdi-book</v-icon>My Recipes
         </v-tab>
         <v-tab>
-          <v-icon left>mdi-lock</v-icon>Add Recipe
+          <v-icon left>mdi-plus-box</v-icon>Add Recipe
         </v-tab>
 
         <v-tab-item>
@@ -44,12 +44,6 @@ export default {
   },
   data() {
     return {
-      drawer: null,
-      items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
-      ],
-
       recipie: [
         {
           id: 1,
@@ -76,6 +70,7 @@ export default {
       ]
     };
   },
+
   methods: {
     deleteRecipie(id) {
       this.recipie = this.recipie.filter(recipie => recipie.id !== id);
